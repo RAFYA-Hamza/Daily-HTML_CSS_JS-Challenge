@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search for a rental car</title>
+    <title>Sign in page</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -14,12 +14,20 @@
         <div class="first-column"></div>
         <div class="second-column"></div>
         <div class="form-container">
-            <div class="input-container">
+            <div id="loginForm" class="input-container">
                 <p class="input__container__p1">Sign in</p>
-                <input type="text" placeholder="Enter your e-mail" class="input__container__email">
-                <input type="password" placeholder="****************" class="input__container__password">
-                <button class="input__container__button">Sign in</button>
-                <p class="input__container__p2">Forgot your password?</p>
+
+                <div class="form-group">
+                    <!-- <label for="email">E-mail:</label> -->
+                    <input type="text" id="email" name="email" placeholder="Enter your e-mail">
+                    <div class="error" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <!-- <label for="password">Password:</label> -->
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <div class="error" id="password-error"></div>
+                </div>
+                <button id="submit-button" type="submit" class="input__container__button">Sign in</button>
             </div>
             <div class="social-media-container">
                 <div class="social__media__text">
@@ -29,16 +37,22 @@
                 </div>
                 <div class="social__media__icon">
                     <div class="facebook-container icon">
-                        <img src="icons/facebook.png" alt="Facebook icon">
+
+                        <img onclick="location.href='https://web.facebook.com/'" src="./icons/facebook.png"
+                            alt="Facebook icon">
+
                     </div>
                     <div class="twiter-container icon">
-                        <img src="icons/twitter.png" alt="Twiter icon">
+                        <img onclick="location.href='https://x.com/?lang=fr'" src="./icons/twitter.png"
+                            alt="Twiter icon">
                     </div>
                     <div class="linkedin-container icon">
-                        <img src="icons/linkedin.png" alt="Linkedin icon">
+                        <img onclick="location.href='https://fr.linkedin.com/'" src="./icons/linkedin.png"
+                            alt="Linkedin icon">
                     </div>
                     <div class="reddit-container icon">
-                        <img src="icons/reddit.png" alt="Reddit icon">
+                        <img onclick="location.href='https://www.reddit.com/'" src="./icons/reddit.png"
+                            alt="Reddit icon">
                     </div>
                 </div>
             </div>
@@ -61,6 +75,7 @@
         </div>
 
     </div>
+    <script src="script/script.js"></script>
 
 
 </body>

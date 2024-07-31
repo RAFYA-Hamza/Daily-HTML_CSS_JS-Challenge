@@ -19,14 +19,14 @@
 
 .first-column {
   width: 14px;
-  height: 719px;
+  height: 98%;
   background-color: rgb(239, 101, 234);
   border-radius: 15px;
 }
 
 .second-column {
   width: 40px;
-  height: 946px;
+  height: 98%;
   background-color: rgb(175, 120, 218);
   border-radius: 9px;
 }
@@ -52,21 +52,43 @@
   flex-direction: column;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 10px;
+}
+
+.error {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(211, 3, 3);
+}
+
 .input__container__p1 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
   color: rgba(32, 31, 109, 1);
 }
 
-.input__container__email,
-.input__container__password {
-  height: 51px;
+input {
+  height: 45px;
   background-color: white;
   border: 2px solid rgb(221, 228, 237);
   border-radius: 5px;
-  margin-bottom: 10px;
   padding: 10px;
+}
+
+label {
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: rgb(5, 3, 109);
+}
+
+.email-error {
+  border-color: red;
+  content: "error";
 }
 
 ::placeholder {
@@ -77,7 +99,6 @@
 .input__container__button {
   width: 314px;
   height: 51px;
-  margin-top: 20px;
   background-color: rgba(162, 44, 255, 1);
   border: none;
   border-radius: 5px;
